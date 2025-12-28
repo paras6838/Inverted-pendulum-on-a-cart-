@@ -1,13 +1,26 @@
 # Inverted-pendulum-on-a-cart-control-system-project
 📖 Overview
-This project implements an inverted pendulum on a cart system, a classic unstable control problem, using an Arduino Uno, MPU6050 IMU, and DC motors driven by L298.
-The objective is to stabilize the pendulum in the upright position using feedback control (PD / LQR-inspired control).
+The Inverted Pendulum on a Cart is a classic control systems problem that demonstrates the stabilization of an inherently unstable nonlinear system using feedback control.
+In this project, a pendulum mounted on a moving cart is actively balanced in the upright position by controlling the cart’s motion using sensor feedback and a closed-loop control algorithm.
+This project combines control theory, embedded systems, and real-time hardware implementation.
 
 🎯 Objectives
-1. Measure pendulum angle using MPU6050
-2. Stabilize the pendulum at the upright position
-3. Implement real-time closed-loop control
-4. Study limitations of low-cost hardware in fast control systems
+1. To model and understand the dynamics of an inverted pendulum system
+2. To design and implement a real-time feedback controller
+3. To stabilize the pendulum in the upright position
+4. To validate the controller using both simulation and physical hardware
+
+🧠 Principle of Operation
+The inverted pendulum is open-loop unstable—any small disturbance causes it to fall.
+A feedback controller continuously measures the pendulum angle and applies corrective motion to the cart so that the pendulum remains balanced.
+
+The system follows this loop:
+
+1.Measure pendulum angle using an IMU sensor
+2.Compute error from the desired upright position
+3.Apply control law to calculate motor command
+4.Drive motors to move the cart and correct the error
+5.This closed-loop process runs continuously in real time.
    
 ⚙️ System Components
 
